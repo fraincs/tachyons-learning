@@ -63,7 +63,7 @@ a { background-color: transparent; }
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ -webkit-text-decoration: underline dotted; text-decoration: underline dotted; /* 2 */ }
+abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ text-decoration: underline dotted; /* 2 */ }
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -1052,21 +1052,21 @@ code, .code { font-family: Consolas, monaco, monospace; }
    ROTATIONS
 
 */
-.rotate-45 { -webkit-transform: rotate( 45deg ); transform: rotate( 45deg ); }
-.rotate-90 { -webkit-transform: rotate( 90deg ); transform: rotate( 90deg ); }
-.rotate-135 { -webkit-transform: rotate( 135deg ); transform: rotate( 135deg ); }
-.rotate-180 { -webkit-transform: rotate( 180deg ); transform: rotate( 180deg ); }
-.rotate-225 { -webkit-transform: rotate( 225deg ); transform: rotate( 225deg ); }
-.rotate-270 { -webkit-transform: rotate( 270deg ); transform: rotate( 270deg ); }
-.rotate-315 { -webkit-transform: rotate( 315deg ); transform: rotate( 315deg ); }
+.rotate-45 { transform: rotate( 45deg ); }
+.rotate-90 { transform: rotate( 90deg ); }
+.rotate-135 { transform: rotate( 135deg ); }
+.rotate-180 { transform: rotate( 180deg ); }
+.rotate-225 { transform: rotate( 225deg ); }
+.rotate-270 { transform: rotate( 270deg ); }
+.rotate-315 { transform: rotate( 315deg ); }
 /*
 
    SKINS
    Docs: http://tachyons.io/docs/themes/skins/
 
    Classes for setting foreground and background colors on elements.
-   If you haven't declared a border color, but set border on an element, it will 
-   be set to the current text color. 
+   If you haven't declared a border color, but set border on an element, it will
+   be set to the current text color.
 
 */
 /* Text colors */
@@ -1184,6 +1184,45 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .bg-washed-yellow { background-color: #fffceb; }
 .bg-washed-red { background-color: #ffdfdf; }
 .bg-inherit { background-color: inherit; }
+/* Fill - for SVGs */
+.fill-black { fill: #000; }
+.fill-near-black { fill: #111; }
+.fill-dark-gray { fill: #333; }
+.fill-mid-gray { fill: #555; }
+.fill-gray { fill: #777; }
+.fill-silver { fill: #999; }
+.fill-light-silver { fill: #aaa; }
+.fill-moon-gray { fill: #ccc; }
+.fill-light-gray { fill: #eee; }
+.fill-near-white { fill: #f4f4f4; }
+.fill-white { fill: #fff; }
+.fill-transparent { fill: transparent; }
+.fill-dark-red { fill: #e7040f; }
+.fill-red { fill: #ff4136; }
+.fill-light-red { fill: #ff725c; }
+.fill-orange { fill: #ff6300; }
+.fill-gold { fill: #ffb700; }
+.fill-yellow { fill: #ffd700; }
+.fill-light-yellow { fill: #fbf1a9; }
+.fill-purple { fill: #5e2ca5; }
+.fill-light-purple { fill: #a463f2; }
+.fill-dark-pink { fill: #d5008f; }
+.fill-hot-pink { fill: #ff41b4; }
+.fill-pink { fill: #ff80cc; }
+.fill-light-pink { fill: #ffa3d7; }
+.fill-dark-green { fill: #137752; }
+.fill-green { fill: #19a974; }
+.fill-light-green { fill: #9eebcf; }
+.fill-navy { fill: #001b44; }
+.fill-dark-blue { fill: #00449e; }
+.fill-blue { fill: #357edd; }
+.fill-light-blue { fill: #96ccff; }
+.fill-lightest-blue { fill: #cdecff; }
+.fill-washed-blue { fill: #f6fffe; }
+.fill-washed-green { fill: #e8fdf5; }
+.fill-washed-yellow { fill: #fffceb; }
+.fill-washed-red { fill: #ffdfdf; }
+.fill-inherit { fill: inherit; }
 /* 
   
    SKINS:PSEUDO
@@ -1412,6 +1451,82 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .hover-bg-washed-red:hover { background-color: #ffdfdf; }
 .hover-bg-washed-red:focus { background-color: #ffdfdf; }
 .hover-bg-inherit:hover, .hover-bg-inherit:focus { background-color: inherit; }
+/* Hover fill */
+.hover-fill-black:hover { fill: #000; }
+.hover-fill-black:focus { fill: #000; }
+.hover-fill-near-black:hover { fill: #111; }
+.hover-fill-near-black:focus { fill: #111; }
+.hover-fill-dark-gray:hover { fill: #333; }
+.hover-fill-dark-gray:focus { fill: #333; }
+.hover-fill-mid-gray:hover { fill: #555; }
+.hover-fill-mid-gray:focus { fill: #555; }
+.hover-fill-gray:hover { fill: #777; }
+.hover-fill-gray:focus { fill: #777; }
+.hover-fill-silver:hover { fill: #999; }
+.hover-fill-silver:focus { fill: #999; }
+.hover-fill-light-silver:hover { fill: #aaa; }
+.hover-fill-light-silver:focus { fill: #aaa; }
+.hover-fill-moon-gray:hover { fill: #ccc; }
+.hover-fill-moon-gray:focus { fill: #ccc; }
+.hover-fill-light-gray:hover { fill: #eee; }
+.hover-fill-light-gray:focus { fill: #eee; }
+.hover-fill-near-white:hover { fill: #f4f4f4; }
+.hover-fill-near-white:focus { fill: #f4f4f4; }
+.hover-fill-white:hover { fill: #fff; }
+.hover-fill-white:focus { fill: #fff; }
+.hover-fill-transparent:hover { fill: transparent; }
+.hover-fill-transparent:focus { fill: transparent; }
+.hover-fill-dark-red:hover { fill: #e7040f; }
+.hover-fill-dark-red:focus { fill: #e7040f; }
+.hover-fill-red:hover { fill: #ff4136; }
+.hover-fill-red:focus { fill: #ff4136; }
+.hover-fill-light-red:hover { fill: #ff725c; }
+.hover-fill-light-red:focus { fill: #ff725c; }
+.hover-fill-orange:hover { fill: #ff6300; }
+.hover-fill-orange:focus { fill: #ff6300; }
+.hover-fill-gold:hover { fill: #ffb700; }
+.hover-fill-gold:focus { fill: #ffb700; }
+.hover-fill-yellow:hover { fill: #ffd700; }
+.hover-fill-yellow:focus { fill: #ffd700; }
+.hover-fill-light-yellow:hover { fill: #fbf1a9; }
+.hover-fill-light-yellow:focus { fill: #fbf1a9; }
+.hover-fill-purple:hover { fill: #5e2ca5; }
+.hover-fill-purple:focus { fill: #5e2ca5; }
+.hover-fill-light-purple:hover { fill: #a463f2; }
+.hover-fill-light-purple:focus { fill: #a463f2; }
+.hover-fill-dark-pink:hover { fill: #d5008f; }
+.hover-fill-dark-pink:focus { fill: #d5008f; }
+.hover-fill-hot-pink:hover { fill: #ff41b4; }
+.hover-fill-hot-pink:focus { fill: #ff41b4; }
+.hover-fill-pink:hover { fill: #ff80cc; }
+.hover-fill-pink:focus { fill: #ff80cc; }
+.hover-fill-light-pink:hover { fill: #ffa3d7; }
+.hover-fill-light-pink:focus { fill: #ffa3d7; }
+.hover-fill-dark-green:hover { fill: #137752; }
+.hover-fill-dark-green:focus { fill: #137752; }
+.hover-fill-green:hover { fill: #19a974; }
+.hover-fill-green:focus { fill: #19a974; }
+.hover-fill-light-green:hover { fill: #9eebcf; }
+.hover-fill-light-green:focus { fill: #9eebcf; }
+.hover-fill-navy:hover { fill: #001b44; }
+.hover-fill-navy:focus { fill: #001b44; }
+.hover-fill-dark-blue:hover { fill: #00449e; }
+.hover-fill-dark-blue:focus { fill: #00449e; }
+.hover-fill-blue:hover { fill: #357edd; }
+.hover-fill-blue:focus { fill: #357edd; }
+.hover-fill-light-blue:hover { fill: #96ccff; }
+.hover-fill-light-blue:focus { fill: #96ccff; }
+.hover-fill-lightest-blue:hover { fill: #cdecff; }
+.hover-fill-lightest-blue:focus { fill: #cdecff; }
+.hover-fill-washed-blue:hover { fill: #f6fffe; }
+.hover-fill-washed-blue:focus { fill: #f6fffe; }
+.hover-fill-washed-green:hover { fill: #e8fdf5; }
+.hover-fill-washed-green:focus { fill: #e8fdf5; }
+.hover-fill-washed-yellow:hover { fill: #fffceb; }
+.hover-fill-washed-yellow:focus { fill: #fffceb; }
+.hover-fill-washed-red:hover { fill: #ffdfdf; }
+.hover-fill-washed-red:focus { fill: #ffdfdf; }
+.hover-fill-inherit:hover, .hover-fill-inherit:focus { fill: inherit; }
 /* Variables */
 /*
    SPACING
@@ -1863,12 +1978,12 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .underline-hover:hover, .underline-hover:focus { text-decoration: underline; }
 /* Can combine this with overflow-hidden to make background images grow on hover
  * even if you are using background-size: cover */
-.grow { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); transition: -webkit-transform .25s ease-out; transition: transform .25s ease-out; transition: transform .25s ease-out, -webkit-transform .25s ease-out; }
-.grow:hover, .grow:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
-.grow:active { -webkit-transform: scale( .90 ); transform: scale( .90 ); }
-.grow-large { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); transition: -webkit-transform .25s ease-in-out; transition: transform .25s ease-in-out; transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
-.grow-large:hover, .grow-large:focus { -webkit-transform: scale( 1.2 ); transform: scale( 1.2 ); }
-.grow-large:active { -webkit-transform: scale( .95 ); transform: scale( .95 ); }
+.grow { -moz-osx-font-smoothing: grayscale; backface-visibility: hidden; transform: translateZ( 0 ); transition: transform .25s ease-out; }
+.grow:hover, .grow:focus { transform: scale( 1.05 ); }
+.grow:active { transform: scale( .90 ); }
+.grow-large { -moz-osx-font-smoothing: grayscale; backface-visibility: hidden; transform: translateZ( 0 ); transition: transform .25s ease-in-out; }
+.grow-large:hover, .grow-large:focus { transform: scale( 1.2 ); }
+.grow-large:active { transform: scale( .95 ); }
 /* Add pointer on hover */
 .pointer:hover { cursor: pointer; }
 /* 
@@ -2260,13 +2375,13 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .relative-ns { position: relative; }
  .absolute-ns { position: absolute; }
  .fixed-ns { position: fixed; }
- .rotate-45-ns { -webkit-transform: rotate( 45deg ); transform: rotate( 45deg ); }
- .rotate-90-ns { -webkit-transform: rotate( 90deg ); transform: rotate( 90deg ); }
- .rotate-135-ns { -webkit-transform: rotate( 135deg ); transform: rotate( 135deg ); }
- .rotate-180-ns { -webkit-transform: rotate( 180deg ); transform: rotate( 180deg ); }
- .rotate-225-ns { -webkit-transform: rotate( 225deg ); transform: rotate( 225deg ); }
- .rotate-270-ns { -webkit-transform: rotate( 270deg ); transform: rotate( 270deg ); }
- .rotate-315-ns { -webkit-transform: rotate( 315deg ); transform: rotate( 315deg ); }
+ .rotate-45-ns { transform: rotate( 45deg ); }
+ .rotate-90-ns { transform: rotate( 90deg ); }
+ .rotate-135-ns { transform: rotate( 135deg ); }
+ .rotate-180-ns { transform: rotate( 180deg ); }
+ .rotate-225-ns { transform: rotate( 225deg ); }
+ .rotate-270-ns { transform: rotate( 270deg ); }
+ .rotate-315-ns { transform: rotate( 315deg ); }
  .pa0-ns { padding: 0; }
  .pa1-ns { padding: .25rem; }
  .pa2-ns { padding: .5rem; }
@@ -2683,13 +2798,13 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .relative-m { position: relative; }
  .absolute-m { position: absolute; }
  .fixed-m { position: fixed; }
- .rotate-45-m { -webkit-transform: rotate( 45deg ); transform: rotate( 45deg ); }
- .rotate-90-m { -webkit-transform: rotate( 90deg ); transform: rotate( 90deg ); }
- .rotate-135-m { -webkit-transform: rotate( 135deg ); transform: rotate( 135deg ); }
- .rotate-180-m { -webkit-transform: rotate( 180deg ); transform: rotate( 180deg ); }
- .rotate-225-m { -webkit-transform: rotate( 225deg ); transform: rotate( 225deg ); }
- .rotate-270-m { -webkit-transform: rotate( 270deg ); transform: rotate( 270deg ); }
- .rotate-315-m { -webkit-transform: rotate( 315deg ); transform: rotate( 315deg ); }
+ .rotate-45-m { transform: rotate( 45deg ); }
+ .rotate-90-m { transform: rotate( 90deg ); }
+ .rotate-135-m { transform: rotate( 135deg ); }
+ .rotate-180-m { transform: rotate( 180deg ); }
+ .rotate-225-m { transform: rotate( 225deg ); }
+ .rotate-270-m { transform: rotate( 270deg ); }
+ .rotate-315-m { transform: rotate( 315deg ); }
  .pa0-m { padding: 0; }
  .pa1-m { padding: .25rem; }
  .pa2-m { padding: .5rem; }
@@ -3106,13 +3221,13 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .relative-l { position: relative; }
  .absolute-l { position: absolute; }
  .fixed-l { position: fixed; }
- .rotate-45-l { -webkit-transform: rotate( 45deg ); transform: rotate( 45deg ); }
- .rotate-90-l { -webkit-transform: rotate( 90deg ); transform: rotate( 90deg ); }
- .rotate-135-l { -webkit-transform: rotate( 135deg ); transform: rotate( 135deg ); }
- .rotate-180-l { -webkit-transform: rotate( 180deg ); transform: rotate( 180deg ); }
- .rotate-225-l { -webkit-transform: rotate( 225deg ); transform: rotate( 225deg ); }
- .rotate-270-l { -webkit-transform: rotate( 270deg ); transform: rotate( 270deg ); }
- .rotate-315-l { -webkit-transform: rotate( 315deg ); transform: rotate( 315deg ); }
+ .rotate-45-l { transform: rotate( 45deg ); }
+ .rotate-90-l { transform: rotate( 90deg ); }
+ .rotate-135-l { transform: rotate( 135deg ); }
+ .rotate-180-l { transform: rotate( 180deg ); }
+ .rotate-225-l { transform: rotate( 225deg ); }
+ .rotate-270-l { transform: rotate( 270deg ); }
+ .rotate-315-l { transform: rotate( 315deg ); }
  .pa0-l { padding: 0; }
  .pa1-l { padding: .25rem; }
  .pa2-l { padding: .5rem; }
