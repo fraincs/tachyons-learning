@@ -1,3 +1,18 @@
-body {
-    background-color: var(--near-black);
+.info-pane {
+    background-image: url(../src/assets/war-on-drugs-profile.jpg);
+    position: relative;
+}
+
+.info-pane::after {
+    background-color: rgba(0, 0, 0, .4);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.actions-col {
+    width: 80px;
 }
